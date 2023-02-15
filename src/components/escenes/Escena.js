@@ -2,15 +2,16 @@ import React from 'react';
 import { Paragraph } from './Escena.styled';
 
 
-export default function Escena(props, counter) {    
+export default function Escena({isActive, item}) {    
 //console.log(props);
 //console.log('props item id', props.item.id);
 
     return(        
         <Paragraph
-        key={props.item.id}
+        key={item.id}
+        isActive={isActive}
         >
-            {props.item.text}
+            {item.text}
         </Paragraph>
     )
 }

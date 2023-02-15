@@ -1,19 +1,13 @@
 import styled from "styled-components";
 
 export const Paragraph = styled.div`
-    border: 1px solid black;
+    font-family: sans-serif;
+    font-size: 1rem; 
+    border: 1px solid #003B46;
     border-radius: 30px;
     padding: 10px;
     text-align: center;
     margin: 20px; 
-
-    &.isActive {
-        background-color: #6A87A1;
-    }
+    
+    background-color: ${({ isActive }) => isActive ? `#6A87A1` : '#FFFFFF'}
 `;
-
-export const ParagraphContainer = styled.div`
-    text-align: center;
-    border: 1px solid pink;
-`;
-
