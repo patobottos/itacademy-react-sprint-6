@@ -1,18 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
-import Presentacio from "./components/presentacio/Presentacio"
+import Presentacio from "./components/presentacio/Presentacio";
+import { GlobalStyle } from './components/globalStyles/GlobalStyle';
 import ButtonSet from "./components/botons/Boto";
 import { Paragraph } from "./components/escenes/Escena.styled";
-import { data } from './data/data'
-
+import { data } from './data/data';
 
 export default function App() {
 
-    const [haComenzado, setHaComenzado] = useState(false);
+    const [hasStarted, setHasStarted] = useState(true);
 
     const [counter, setCounter] = useState(0);
 
-    const handleStart = () => {setHaComenzado(true);}
+    const handleStart = () => {setHasStarted(true);}
 
     const handleMinus = () => {
         setCounter(counter <= 0 ? 3 : counter - 1);
@@ -34,11 +34,14 @@ export default function App() {
         );
     });
 
-
     return(
         <div>
-            {haComenzado ? (
+            {hasStarted ? (
                 <div>
+                    <GlobalStyle 
+                        link={data[counter].img}
+                    />
+
                     <ButtonSet 
                         handleMinus={handleMinus} 
                         handlePlus={handlePlus}

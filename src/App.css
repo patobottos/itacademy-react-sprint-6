@@ -8,26 +8,3 @@
 .App {
   text-align: center;
 }
-
-.btn-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.btn-minus, .btn-plus {
-  height: 50px;
-  width: 300px;
-  border-radius: 25px;
-  cursor: pointer;
-  color: #FFFFFF;
-  background-color: #3E84C1;
-  font-size: 1.5rem;
-  margin-right: 20px;
-}
-    
-.btn-minus:hover, .btn-plus:hover {
-      color:  #FFFFFF;
-      background-color: #20486B;
-}
