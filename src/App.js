@@ -8,7 +8,7 @@ import { data } from './data/data';
 
 export default function App() {
 
-    const [hasStarted, setHasStarted] = useState(true);
+    const [hasStarted, setHasStarted] = useState(false);
 
     const [counter, setCounter] = useState(0);
 
